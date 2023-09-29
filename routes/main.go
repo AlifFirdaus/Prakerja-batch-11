@@ -15,7 +15,7 @@ import (
 // Finally, it returns the database connection object.
 func SetupRoutes(router *gin.Engine) *gorm.DB {
 	// Load environment variables from .env file
-	//config.LoadEnv()
+	config.LoadEnv()
 
 	// Set up database connection
 	db := config.SetupDatabase()
