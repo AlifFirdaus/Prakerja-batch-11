@@ -4,6 +4,7 @@ import (
 	"game-list-api/config"
 	"game-list-api/pkg/games"
 	"game-list-api/repositories"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -16,6 +17,7 @@ import (
 func SetupRoutes(router *gin.Engine) *gorm.DB {
 	// Load environment variables from .env file
 	//config.LoadEnv()
+	os.Getenv("APP_PORT")
 
 	// Set up database connection
 	db := config.SetupDatabase()
